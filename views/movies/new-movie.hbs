@@ -1,14 +1,19 @@
-<a href="/">Home</a>
-<h1>Welcome to new movies</h1>
-<form action="/movies/create" method="POST">
-<input type="text" name="title" id="title" placeholder="Title">
-<input type="text" name="genre" id="genre" placeholder="Genre">
-<input type="text" name="plot" id="plot" placeholder="Plot">
-<label for="cast">Choose the cast:</label>
-<select name="cast" id="cast" multiple>
-{{#each allCelebrities}}
-<option value="{{this._id}}">{{this.name}}</option>
-{{/each}}
-</select>
-<input type="submit" value="Send movie to database" />
-</form>
+<div class="container-v">
+    <a href="/">Home</a>
+    <h1>Create a new movie</h1>
+    <form action="/movies/create" method="POST">
+        <div class="container-h">
+            <input style="margin:10px" type="text" name="title" id="title" placeholder="Title">
+            <input style="margin:10px" type="text" name="genre" id="genre" placeholder="Genre">
+            <input style="margin:10px" type="text" name="plot" id="plot" placeholder="Plot">
+            <label style="margin:10px" for="cast">Choose the cast:</label>
+            <select style="margin:10px" name="cast" id="cast" multiple>
+            {{#each allCelebrities}}
+            <option value="{{this._id}}">{{this.name}}</option>
+            {{/each}}
+            </select>
+            <input type="submit" value="Send movie to database" />
+        </div>
+    </form>
+</div>
+

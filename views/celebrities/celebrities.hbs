@@ -1,11 +1,20 @@
-<a href="/">Home</a>
+<div class="container-v">
+    <a href="/">Home</a>
 
-<h2>All Celebrities</h2>
-<ul>
+    <h2>All Celebrities</h2>
 
-{{#each allCelebrities}}
+    <ul>
+        {{#each allCelebrities}}
+        <div class="container-h">
+            <li>{{this.name}}</li>
+            <a href="/celebrities/{{this._id}}">See details</a>
+            <form action="/celebrities/{{this._id}}/delete" method="POST">
+                <input class="submit" type="submit" value="Delete Celebrity" />
+            </form>
+            <a href="/celebrities/{{this._id}}/edit"> Edit Celebrity</a>
+        </div>
+        {{/each}}
+    </ul>
 
-<li>{{this.name}}</li>
+</div>
 
-{{/each}}
-</ul>

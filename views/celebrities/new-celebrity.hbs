@@ -1,9 +1,16 @@
-<a href="/">Home</a>
+<div class="container-v">
+    <a href="/">Home</a>
 
-<h2>Page</h2>
-<form action="/celebrities/create" method="POST">
-<input type="text" name="name" id="name" placeholder="Name">
-<input type="text" name="occupation" id="occupation" placeholder="Occupation">
-<input type="text" name="catchPhrase" id="catchPhrase" placeholder="CatchPhrase">
-<input type="submit" value="Send celebrity to database" />
-</form>
+    <h2>Create a celebrity</h2>
+
+    <form action="/celebrities/create" method="POST">
+        <div class="container-h">
+            <input style="margin:10px" type="text" name="name" id="name" placeholder="Name">
+            <input style="margin:10px" type="text" name="occupation" id="occupation" placeholder="Occupation">
+            <input style="margin:10px" type="text" name="catchPhrase" id="catchPhrase" placeholder="CatchPhrase">
+            <input style="margin:10px" class="submit" type="submit" value="Send celebrity to database" />
+        </div>
+    </form>
+
+
+</div>
